@@ -1,0 +1,427 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+
+  
+</head>
+<body class="bg-gray-50">
+  <!-- Navbar -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <a href="#" class="text-2xl font-bold text-[var(--shopsy-purple)]">Shopsy</a>
+
+        <!-- Search Bar (hidden on mobile) -->
+        <div class="hidden md:flex flex-1 mx-4">
+          <div class="flex w-full bg-gray-100 rounded-full overflow-hidden">
+            <input type="text" placeholder="Search for products..." class="flex-1 px-4 py-2 bg-transparent text-sm focus:outline-none" />
+            <button class="px-4 bg-[var(--shopsy-purple)] text-white">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-width="2" d="M21 21l-4.35-4.35M16.65 16.65A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Nav links (desktop) -->
+        <div class="hidden md:flex items-center space-x-6 text-sm">
+          <a href="#" class="text-gray-700 hover:text-[var(--shopsy-purple)]">Login</a>
+          <a href="#" class="px-4 py-2 bg-[var(--shopsy-red)] text-white rounded">Sign Up</a>
+          <a href="#" class="relative">
+            <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-width="2" d="M3 3h18l-1 14H4L3 3zM7 10h2l1 4h4l1-4h2"/>
+            </svg>
+            <span class="absolute -top-2 -right-2 bg-[var(--shopsy-red)] text-white text-xs font-semibold px-1.5 py-0.5 rounded-full">2</span>
+          </a>
+        </div>
+
+        <!-- Hamburger button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <input type="text" placeholder="Search..." class="w-full px-4 py-2 bg-gray-100 rounded-full text-sm focus:outline-none" />
+      <a href="#" class="block text-gray-700">Login</a>
+      <a href="#" class="block text-gray-700">Sign Up</a>
+      <a href="#" class="block text-gray-700">Cart (2)</a>
+    </div>
+  </nav>
+ <nav class="bg-white shadow p-3">
+    <div class="max-w-7xl mx-auto flex items-center relative">
+
+      <!-- Scroll Left Button -->
+      <button id="scrollLeft" 
+        class="hidden md:flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full hover:bg-gray-300 absolute left-2 z-10">
+        &#8592;
+      </button>
+
+      <!-- Image Container -->
+      <div id="imgContainer" class="flex space-x-4 overflow-x-auto scrollbar-hide scroll-smooth no-scrollbar px-14">
+        <img class="h-12 w-12 rounded-full flex-shrink-0 cursor-pointer" src="img/nav/1.webp" alt="img1" />
+        <img class="h-12 w-12 rounded-full flex-shrink-0 cursor-pointer" src="img/nav/2.webp" alt="img2" />
+        <img class="h-12 w-12 rounded-full flex-shrink-0 cursor-pointer" src="img/nav/3.webp" alt="img3" />
+        <img class="h-12 w-12 rounded-full flex-shrink-0 cursor-pointer" src="img/nav/4.webp" alt="img4" />
+        <img class="h-12 w-12 rounded-full flex-shrink-0 cursor-pointer" src="img/nav/5.webp" alt="img5" />
+        <img class="h-12 w-12 rounded-full flex-shrink-0 cursor-pointer" src="img/nav/6.webp" alt="img6" />
+        <img class="h-12 w-12 rounded-full flex-shrink-0 cursor-pointer" src="img/nav/7.webp" alt="img7" />
+        <img class="h-12 w-12 rounded-full flex-shrink-0 cursor-pointer" src="img/nav/8.webp" alt="img8" />
+        <img class="h-12 w-12 rounded-full flex-shrink-0 cursor-pointer" src="img/nav/9.webp" alt="img9" />
+        <img class="h-12 w-12 rounded-full flex-shrink-0 cursor-pointer" src="img/nav/10.webp" alt="img10" />
+        <img class="h-12 w-12 rounded-full flex-shrink-0 cursor-pointer" src="img/nav/11.webp" alt="img11" />
+      </div>
+
+      <!-- Scroll Right Button -->
+      <button id="scrollRight" 
+        class="hidden md:flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full hover:bg-gray-300 absolute right-2 z-10">
+        &#8594;
+      </button>
+    </div>
+  </nav>
+
+  
+
+  
+      
+  
+
+<!-- slider starrt -->
+
+
+  <div class="relative w-full max-w-3xl mx-auto overflow-hidden rounded-lg shadow-lg">
+    <!-- Slides -->
+    <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+      <img src="img/sliders/1.webp" class="w-full flex-shrink-0 object-cover" alt="Slide 1" />
+      <img src="img/sliders/2.webp" class="w-full flex-shrink-0 object-cover" alt="Slide 2" />
+      <img src="img/sliders/3.webp" class="w-full flex-shrink-0 object-cover" alt="Slide 3" />
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button id="prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-200">
+      &#10094;
+    </button>
+    <button id="next" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-200">
+      &#10095;
+    </button>
+
+    <!-- Dots -->
+    <div id="dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+      <span class="dot w-3 h-3 bg-white rounded-full opacity-70 hover:opacity-100 cursor-pointer"></span>
+      <span class="dot w-3 h-3 bg-white rounded-full opacity-70 hover:opacity-100 cursor-pointer"></span>
+      <span class="dot w-3 h-3 bg-white rounded-full opacity-70 hover:opacity-100 cursor-pointer"></span>
+    </div>
+  </div>
+
+slider end 
+
+
+
+
+  
+ 
+ <div class="relative w-full max-w-7xl px-4">
+    <!-- Left Button -->
+    <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-200">
+      &#8592;
+    </button>
+
+    <!-- Slider -->
+    <div id="slider" class="slider-container overflow-x-auto scroll-smooth whitespace-nowrap flex gap-4 py-6">
+      <!-- Example Images -->
+      <img src="img/deals/6.webp" class="w-40 sm:w-44 md:w-48 lg:w-52 h-36 object-cover rounded-t-lg rounded-b-none border border-gray-300 shadow-md" />
+      <img src="img/deals/5.webp" class="w-40 sm:w-44 md:w-48 lg:w-52 h-36 object-cover rounded-t-lg rounded-b-none border border-gray-300 shadow-md" />
+      <img src="img/deals/8.webp" class="w-40 sm:w-44 md:w-48 lg:w-52 h-36 object-cover rounded-t-lg rounded-b-none border border-gray-300 shadow-md" />
+      <img src="img/deals/9.webp" class="w-40 sm:w-44 md:w-48 lg:w-52 h-36 object-cover rounded-t-lg rounded-b-none border border-gray-300 shadow-md" />
+      <img src="img/deals/3.webp" class="w-40 sm:w-44 md:w-48 lg:w-52 h-36 object-cover rounded-t-lg rounded-b-none border border-gray-300 shadow-md" />
+      <img src="img/deals/4.webp" class="w-40 sm:w-44 md:w-48 lg:w-52 h-36 object-cover rounded-t-lg rounded-b-none border border-gray-300 shadow-md" />
+      <img src="img/deals/7.webp" class="w-40 sm:w-44 md:w-48 lg:w-52 h-36 object-cover rounded-t-lg rounded-b-none border border-gray-300 shadow-md" />
+    </div>
+
+    <!-- Right Button -->
+    <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-200">
+      &#8594;
+    </button>
+  </div>
+
+ 
+  
+  <section class="py-8 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">Featured Products</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+      
+      <!-- Card Start -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition">
+        <div class="relative">
+          <img src="img/cardimg/4.webp" alt="Product" class="w-full h-40 object-cover rounded-t-lg">
+          <span class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded">₹99</span>
+        </div>
+        <div class="p-3 text-sm">
+          <h3 class="font-medium text-gray-800">Stylish T-shirt</h3>
+          <p class="text-gray-500 text-xs mb-2">By XYZ Fashion</p>
+          <div class="flex items-center justify-between">
+            <span class="text-[var(--shopsy-purple)] font-semibold">₹99</span>
+            <button class="px-3 py-1 bg-[var(--shopsy-purple)] text-white text-xs rounded">Buy</button>
+          </div>
+        </div>
+      </div>
+      <!-- Card End -->
+
+      <!-- Repeat for more products -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition">
+        <div class="relative">
+          <img src="img/deals/12.webp" alt="Product" class="w-full h-40 object-cover rounded-t-lg">
+          <span class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded">₹149</span>
+        </div>
+        <div class="p-3 text-sm">
+          <h3 class="font-medium text-gray-800">diamond</h3>
+          <p class="text-gray-500 text-xs mb-2">By stylish</p>
+          <div class="flex items-center justify-between">
+            <span class="text-[var(--shopsy-purple)] font-semibold">₹1149</span>
+            <button class="px-3 py-1 bg-[var(--shopsy-purple)] text-white text-xs rounded">Buy</button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition">
+        <div class="relative">
+          <img src="img/deals/13.webp" alt="Product" class="w-full h-40 object-cover rounded-t-lg">
+          <span class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded">₹149</span>
+        </div>
+        <div class="p-3 text-sm">
+          <h3 class="font-medium text-gray-800">suit</h3>
+          <p class="text-gray-500 text-xs mb-2">By beauty</p>
+          <div class="flex items-center justify-between">
+            <span class="text-[var(--shopsy-purple)] font-semibold">₹345</span>
+            <button class="px-3 py-1 bg-[var(--shopsy-purple)] text-white text-xs rounded">Buy</button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition">
+        <div class="relative">
+          <img src="img/cardimg/3.webp" alt="Product" class="w-full h-40 object-cover rounded-t-lg">
+          <span class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded">₹149</span>
+        </div>
+        <div class="p-3 text-sm">
+          <h3 class="font-medium text-gray-800">t-shirt</h3>
+          <p class="text-gray-500 text-xs mb-2">fashion</p>
+          <div class="flex items-center justify-between">
+            <span class="text-[var(--shopsy-purple)] font-semibold">₹149</span>
+            <button class="px-3 py-1 bg-[var(--shopsy-purple)] text-white text-xs rounded">Buy</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more cards similarly -->
+
+    </div>
+  </div>
+</section>
+ 
+
+  
+ 
+<div class="max-w-7xl mx-auto">
+    <h2 class="text-sm font-bold text-gray-800 mb-6">Recommended for You</h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      
+      <!-- Product Card -->
+      <div class="bg-white shadow-sm rounded border hover:shadow-md transition duration-200">
+        <img src="img/stylish/shirt.webp"
+             alt="Product 1"
+             class="w-full h-52 object-cover" />
+        <div class="p-3">
+          <h3 class="text-sm text-gray-800 mb-1">Trendy Men's T-Shirt</h3>
+          <div class="text-blue-600 font-semibold text-base">₹349</div>
+          <div class="text-sm text-green-600 font-medium">65% off</div>
+        </div>
+      </div>
+
+      <!-- Repeat -->
+      <div class="bg-white shadow-sm rounded border hover:shadow-md transition duration-200">
+        <img src="img/stylish/kurti.webp"
+             alt="Product 2"
+             class="w-full h-52 object-cover" />
+        <div class="p-3">
+          <h3 class="text-sm text-gray-800 mb-1">Stylish Kurti</h3>
+          <div class="text-blue-600 font-semibold text-base">₹499</div>
+          <div class="text-sm text-green-600 font-medium">40% off</div>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-sm rounded border hover:shadow-md transition duration-200">
+        <img src="img/stylish/tooth.webp"
+             alt="Product 3"
+             class="w-full h-52 object-cover" />
+        <div class="p-3">
+          <h3 class="text-sm text-gray-800 mb-1">Bluetooth Earbuds</h3>
+          <div class="text-blue-600 font-semibold text-base">₹1,299</div>
+          <div class="text-sm text-green-600 font-medium">20% off</div>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-sm rounded border hover:shadow-md transition duration-200">
+        <img src="img/stylish/bag.webp"
+             alt="Product 4"
+             class="w-full h-52 object-cover" />
+        <div class="p-3">
+          <h3 class="text-sm text-gray-800 mb-1">Backpack for School</h3>
+          <div class="text-blue-600 font-semibold text-base">₹799</div>
+          <div class="text-sm text-green-600 font-medium">50% off</div>
+        </div>
+      </div>
+
+
+      <div class="bg-white shadow-sm rounded border hover:shadow-md transition duration-200">
+        <img src="img/stylish/shakti.webp"
+             alt="Product 1"
+             class="w-full h-52 object-cover" />
+        <div class="p-3">
+          <h3 class="text-sm text-gray-800 mb-1">natural shakti</h3>
+          <div class="text-blue-600 font-semibold text-base">₹249</div>
+          <div class="text-sm text-green-600 font-medium">65% off</div>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-sm rounded border hover:shadow-md transition duration-200">
+        <img src="img/stylish/alloy ring.webp"
+             alt="Product 1"
+             class="w-full h-52 object-cover" />
+        <div class="p-3">
+          <h3 class="text-sm text-gray-800 mb-1">Alloy Ring</h3>
+          <div class="text-blue-600 font-semibold text-base">₹251</div>
+          <div class="text-sm text-green-600 font-medium">52% off</div>
+        </div>
+      </div>
+
+
+      <div class="bg-white shadow-sm rounded border hover:shadow-md transition duration-200">
+        <img src="img/stylish/flip flops.webp"
+             alt="Product 1"
+             class="w-full h-52 object-cover" />
+        <div class="p-3">
+          <h3 class="text-sm text-gray-800 mb-1">Flip Flops</h3>
+          <div class="text-blue-600 font-semibold text-base">₹499</div>
+          <div class="text-sm text-green-600 font-medium">45% off</div>
+        </div>
+      </div>
+
+
+      <div class="bg-white shadow-sm rounded border hover:shadow-md transition duration-200">
+        <img src="img/stylish/badsheet.webp"
+             alt="Product 1"
+             class="w-full h-52 object-cover" />
+        <div class="p-3">
+          <h3 class="text-sm text-gray-800 mb-1">Trendy Men's T-Shirt</h3>
+          <div class="text-blue-600 font-semibold text-base">₹349</div>
+          <div class="text-sm text-green-600 font-medium">65% off</div>
+        </div>
+      </div>
+
+      <!-- Add more products below similarly -->
+
+    </div>
+  </div>
+
+  
+
+  
+<script src="text.js"></script>
+ <footer class="bg-white border-t border-gray-200 ">
+    <div class="max-w-7xl mx-auto px-6 py-10 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+        <!-- About -->
+        <div>
+          <h3 class="text-2xl font-bold mb-4 text-blue-700">Shopsy</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Your one-stop shop for the best deals on electronics, fashion, home essentials, and more. Shop smart, live better.
+          </p>
+          <div class="flex space-x-4 mt-6">
+            <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-blue-600">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12.07c0-5.51-4.49-10-10-10S2 6.56 2 12.07c0 5.01 3.66 9.15 8.44 9.87v-6.99h-2.54v-2.88h2.54v-2.2c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.46h-1.25c-1.23 0-1.62.77-1.62 1.56v1.87h2.77l-.44 2.88h-2.33v6.99c4.78-.72 8.44-4.86 8.44-9.87z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-blue-400">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14.86 4.48 4.48 0 001.96-2.48c-.86.5-1.81.85-2.82 1.04a4.52 4.52 0 00-7.69 4.13c-3.76-.18-7.09-2-9.32-4.76a4.48 4.48 0 001.39 6.05 4.45 4.45 0 01-2.05-.57v.06a4.51 4.51 0 003.62 4.42 4.52 4.52 0 01-2.04.08 4.53 4.53 0 004.22 3.13A9.06 9.06 0 012 19.54 12.84 12.84 0 008.29 21c7.55 0 11.68-6.3 11.68-11.76 0-.18 0-.36-.01-.54A8.18 8.18 0 0023 3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-pink-600">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.76 5.76 0 0122 7.75v8.5A5.76 5.76 0 0116.25 22h-8.5A5.76 5.76 0 012 16.25v-8.5A5.76 5.76 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4zm8.5 1.5a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Customer Care -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-gray-800">Customer Care</h4>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li><a href="#" class="hover:text-blue-600">Help Center</a></li>
+            <li><a href="#" class="hover:text-blue-600">How to Buy</a></li>
+            <li><a href="#" class="hover:text-blue-600">Track Your Order</a></li>
+            <li><a href="#" class="hover:text-blue-600">Returns & Refunds</a></li>
+            <li><a href="#" class="hover:text-blue-600">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Categories -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-gray-800">Categories</h4>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li><a href="#" class="hover:text-blue-600">Electronics</a></li>
+            <li><a href="#" class="hover:text-blue-600">Fashion</a></li>
+            <li><a href="#" class="hover:text-blue-600">Home & Living</a></li>
+            <li><a href="#" class="hover:text-blue-600">Beauty & Health</a></li>
+            <li><a href="#" class="hover:text-blue-600">Toys & Games</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-gray-800">Newsletter</h4>
+          <p class="text-gray-600 text-sm mb-4">
+            Subscribe to get the latest deals and updates.
+          </p>
+          <form class="flex flex-col sm:flex-row gap-3">
+            <input
+              type="email"
+              placeholder="Your email"
+              class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 flex-grow"
+              required
+            />
+            <button
+              type="submit"
+              class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="mt-12 border-t border-gray-200 pt-6 text-center text-gray-500 text-sm">
+        &copy; 2025 Shopsy. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  
+</body>
+</html>
